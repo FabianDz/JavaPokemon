@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class ProyectoPokemon {
 
     public static void main(String[] args) {
-        // Declaramos una variable scanner int
+        // Declaramos un scanner
         Scanner sc = new Scanner(System.in);
         // Declaramos la variable menu y opcion (si iniciar una batalla o salir)
         Menu menu = new Menu();
@@ -24,17 +24,18 @@ public class ProyectoPokemon {
             
             // Imprimimos el menu y solicitamos una opcion
             menu.menuPrincipal();
-            System.out.println("\n\n\tElige una opción: ");
+            System.out.print("\n\n\tElige una opción: ");
             // Leemos la opcion
             opc = sc.nextInt();
             
             switch (opc) {
                 case 1 -> { // Opcion 1 (batalla)
-                    System.err.println("Inicia batalla *musica epica*");
+                    Batalla batalla = new Batalla();
+                    batalla.preparativosBatalla();
                 }
                 
                 case 2 -> { // Opcion 2 (salir)
-                    System.err.println("\n\n¡Nos vemos pronto!");
+                    System.out.println("\n\n¡Nos vemos pronto!");
                 }
                 
                 default ->{ // Cualquier otra opcion
