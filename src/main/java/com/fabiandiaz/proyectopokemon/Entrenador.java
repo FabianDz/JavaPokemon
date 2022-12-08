@@ -4,17 +4,24 @@
  */
 package com.fabiandiaz.proyectopokemon;
 
-import java.util.ArrayList;
-
 /**
  * @author Fabián Josafat Díaz Silleros
  */
 public class Entrenador {
-    
+    // Atributos
     public String nombre;
-    public Pokemon primerP;
-    public Pokemon segundoP;
-    public Pokemon tercerP;
-    public ArrayList<Objetos> listaObjetos = new ArrayList();
+    public Pokemon listaPokes[] = new Pokemon[3];
+    public Objeto listaObjetos[] = new Objeto[3];
     
+    // Constructor
+    public Entrenador(String nombre, Pokemon listaPokes[]){
+        this.nombre = nombre;
+        this.listaPokes = listaPokes;
+        this.listaObjetos[0] = new Objeto("Pocion");
+        this.listaObjetos[1] = new Objeto("Ataque X");
+        this.listaObjetos[2] = new Objeto("Defensa X");
+    }
+    
+    // Métodos Entrenador
+
 }
