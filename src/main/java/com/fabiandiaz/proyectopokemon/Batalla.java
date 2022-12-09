@@ -12,6 +12,7 @@ import java.util.Scanner;
  */
 public class Batalla { 
     
+    // Método que prepara la batalla, genera los entrenadores
     public void preparativosBatalla(){
         // Declaramos un scanner
         Scanner sc = new Scanner(System.in);
@@ -37,10 +38,10 @@ public class Batalla {
         // Pero va a crashear si no es de los tipos existentes
         menu.todosPokes();
         // Pedimos que los elija y les ponga mote o apodo
-        
+        // For de tres iteraciones para elegir a los 3 pokemon y sus motes
         for (int i = 0; i < 3; i++) {
             
-            System.out.print("\n\n"+E1+", elige a tu "+ (i+1) +" compañero: ");
+            System.out.print("\n\n"+E1+", elige a tu "+ (i+1) +"° compañero: ");
             poke = sc.nextLine();
             System.out.print("\nDale un mote: ");
             mote = sc.nextLine();
@@ -53,12 +54,12 @@ public class Batalla {
         Entrenador e1 = new Entrenador(E1, e1Pokes);
         
         // Repetimos lo mismo para el segundo entrenador
-        
+        // Mostramos los pokes
         menu.todosPokes();
-        
+        // For de tres iteraciones para elegir a los 3 pokemon y sus motes
         for (int i = 0; i < 3; i++) {
             
-            System.out.print("\n\n"+E2+", elige a tu "+ (i+1) +" compañero: ");
+            System.out.print("\n\n"+E2+", elige a tu "+ (i+1) +"° compañero: ");
             poke = sc.nextLine();
             System.out.print("\nDale un mote: ");
             mote = sc.nextLine();
@@ -74,6 +75,7 @@ public class Batalla {
         this.iniciaBatalla(e1, e2);
     }
     
+    // Método que inicia la batalla, recibe de parámetro a los entrenadores
     public void iniciaBatalla(Entrenador e1, Entrenador e2){
         System.out.println("\n\nOlas"+e1.nombre+e2.nombre);
     }

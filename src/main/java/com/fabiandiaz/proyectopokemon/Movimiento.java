@@ -12,15 +12,14 @@ public class Movimiento {
     public String nombre;
     public int danio;
     public String efecto;
-    public int presicion;
+    public int presicion = 80;
     public String tipo;
     
     // Constructor
-    public Movimiento(String nombre, int danio, String efecto, int presicion, String tipo){
+    public Movimiento(String nombre, int danio, String efecto, String tipo){
         this.nombre = nombre;
         this.danio = danio;
         this.efecto = efecto;
-        this.presicion = presicion;
         this.tipo = tipo;
     }
     
