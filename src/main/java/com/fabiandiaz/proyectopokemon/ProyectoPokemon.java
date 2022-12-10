@@ -30,7 +30,10 @@ public class ProyectoPokemon {
             
             switch (opc) {
                 case 1 -> { // Opcion 1 (batalla)
+                    // Creamos un objeto de la clase Batalla
                     Batalla batalla = new Batalla();
+                    // Mandamos llamar el método de preparativos
+                    // El cuál al terminar va a llamar a inicia Batalla
                     batalla.preparativosBatalla();
                 }
                 

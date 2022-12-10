@@ -12,7 +12,7 @@ public class Movimiento {
     public String nombre;
     public int danio;
     public String efecto;
-    public int presicion = 80;
+    public int presicion;
     public String tipo;
     
     // Constructor
@@ -20,6 +20,7 @@ public class Movimiento {
         this.nombre = nombre;
         this.danio = danio;
         this.efecto = efecto;
+        this.presicion = 80;
         this.tipo = tipo;
     }
     
